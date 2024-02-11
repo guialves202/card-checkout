@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id            String      @id @default(uuid())
+  ownerFullName String
+  ownerCPF      String
+  branch        String
+  accountNumber String
+  balance       Float
+  debitCard     DebitCard?  @relation(fields: [debitCardId], references: [id])
+  creditCard    CreditCard? @relation(fields: [creditCardId], references: [id])
+  statement     Statement[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  debitCardId   String?
+  creditCardId  String?
+}
+
+model DebitCard {
+  id              String    @id @default(uuid())
+  number          String    @unique
+  ownerNameOnCard String
+  securityCode    String
+  accountId       String?
+  Account         Account[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model CreditCard {
+  id              String    @id @default(uuid())
+  number          String    @unique
+  ownerNameOnCard String
+  securityCode    String
+  limit           Float
+  currentInvoice  Float
+  accountId       String?
+  Account         Account[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Statement {
+  id               String   @id @default(uuid())
+  statementDate    DateTime @default(now())
+  TransactionValue Float
+  Account          Account? @relation(fields: [accountId], references: [id])
+  accountId        String?
+}
