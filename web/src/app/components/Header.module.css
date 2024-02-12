@@ -1,0 +1,45 @@
+.header {
+    padding: .5rem 3rem;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12%;
+}
+
+.mainText {
+    color: rgb(104, 15, 104);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navList li:first-of-type a {
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+}
+
+.navList a {
+    padding: 1rem;
+    font-size: 1.2rem;
+    transition: all .2s ease;
+    display: block;
+}
+
+.navList a:hover {
+    filter: brightness(90%);
+    transform: scale(105%);
+}
+
+
+

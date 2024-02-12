@@ -1,0 +1,39 @@
+.header {
+  padding: .5rem 3rem;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12%;
+}
+
+.mainText {
+  color: rgb(104, 15, 104);
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.accountInfo {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.accountInfoItems {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.navList a {
+  padding: 1rem;
+  font-size: 1.2rem;
+  transition: all .2s ease;
+  display: block;
+}
+
+.navList a:hover {
+  transform: scale(105%);
+}
+
+
+

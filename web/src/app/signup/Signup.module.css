@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    row-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    row-gap: 1rem;
+    align-items: end;
+}
+
+.mainForm input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 3px 5px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
