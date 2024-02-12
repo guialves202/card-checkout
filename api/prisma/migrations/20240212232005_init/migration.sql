@@ -48,6 +48,12 @@ CREATE TABLE "Statement" (
 );
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Account_ownerCPF_key" ON "Account"("ownerCPF");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Account_accountNumber_key" ON "Account"("accountNumber");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "DebitCard_number_key" ON "DebitCard"("number");
 
 -- CreateIndex

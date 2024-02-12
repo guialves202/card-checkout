@@ -10,9 +10,9 @@ datasource db {
 model Account {
   id            String      @id @default(uuid())
   ownerFullName String
-  ownerCPF      String
+  ownerCPF      String      @unique
   branch        String
-  accountNumber String
+  accountNumber String      @unique
   balance       Float
   debitCard     DebitCard?  @relation(fields: [debitCardId], references: [id])
   creditCard    CreditCard? @relation(fields: [creditCardId], references: [id])
