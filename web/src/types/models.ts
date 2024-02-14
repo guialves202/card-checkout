@@ -1,4 +1,5 @@
 export type Account = {
+  id?: string
   ownerFullName: string
   ownerCPF: string
   branch: string
@@ -7,13 +8,15 @@ export type Account = {
 }
 
 export type DebitCard = {
+  id?: string
   number: string
   ownerNameOnCard: string
   securityCode: string
-  accountId?: string
+  accountId: string
 }
 
 export type CreditCard = {
+  id?: string
   number: string
   ownerNameOnCard: string
   securityCode: string
@@ -23,6 +26,7 @@ export type CreditCard = {
 }
 
 export type Statement = {
+  id?: string
   statementDate: Date
   TransactionValue: number
   accountId: string

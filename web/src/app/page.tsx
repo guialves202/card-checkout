@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className='h-[100vh]'>
       <Header></Header>
-      <div className='grid grid-cols-2 grid-rows-1 h-[88%] justify-around w-full px-10 py-[8rem]'>
+      <div className='grid grid-cols-2 grid-rows-1 h-[88%] justify-around w-full px-10 py-[10%]'>
         <Image
           src="./bank.svg"
           width={600}
